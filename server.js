@@ -10,7 +10,8 @@ const port = 5000;
 const baseUrl = `http://localhost:${port}`;
 
 // The URL that the QR code will point to
-const qrCodeTargetUrl = `${baseUrl}/plants-listing`;
+const redirectlink = "https://plants-grow.vercel.app";
+const qrCodeTargetUrl = `${redirectlink}/plants-listing`;
 
 // Sample plant data
 const plants = [
