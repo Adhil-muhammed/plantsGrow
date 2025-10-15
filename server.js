@@ -186,7 +186,7 @@ app.get("/", (req, res) => {
     <body>
         <div class="container">
             <span class="plant-emoji">🌿</span>
-            <h1>Green Paradise</h1>
+            <h1>Mariyam's Gardens</h1>
             <p>Welcome to your one-stop shop for beautiful indoor plants! Transform your space into a green oasis with our carefully curated collection.</p>
             <a href="/plants-listing" class="btn">🌱 Browse Plants</a>
             <a href="/generate-qr" class="btn">📱 Get QR Code</a>
