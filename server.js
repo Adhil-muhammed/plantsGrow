@@ -38,14 +38,14 @@ const plants = [
       "A trailing beauty that's virtually indestructible. Perfect for hanging baskets or climbing moss poles.",
     care: "Medium light, water when dry",
   },
-  {
-    name: "Fiddle Leaf Fig",
-    price: 60.0,
-    imageUrl: "/images/image4.jpg",
-    description:
-      "The Instagram-famous tree that adds dramatic height and elegance to any modern living space.",
-    care: "Bright indirect light, water weekly",
-  },
+  //   {
+  //     name: "Fiddle Leaf Fig",
+  //     price: 60.0,
+  //     imageUrl: "/images/image4.jpg",
+  //     description:
+  //       "The Instagram-famous tree that adds dramatic height and elegance to any modern living space.",
+  //     care: "Bright indirect light, water weekly",
+  //   },
   {
     name: "Peace Lily",
     price: 32.0,
@@ -70,14 +70,14 @@ const plants = [
       "Practically immortal! Glossy leaves that tolerate low light and infrequent watering perfectly.",
     care: "Low to medium light, water monthly",
   },
-  {
-    name: "Philodendron Heartleaf",
-    price: 22.0,
-    imageUrl: "/images/image8.jpg",
-    description:
-      "Cascading heart-shaped leaves that grow quickly and forgive forgotten waterings.",
-    care: "Medium light, water weekly",
-  },
+  //   {
+  //     name: "Philodendron Heartleaf",
+  //     price: 22.0,
+  //     imageUrl: "/images/image8.jpg",
+  //     description:
+  //       "Cascading heart-shaped leaves that grow quickly and forgive forgotten waterings.",
+  //     care: "Medium light, water weekly",
+  //   },
 ];
 
 // Serve static files (optional, but good for a favicon or other assets)
@@ -91,7 +91,7 @@ app.get("/", (req, res) => {
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Green Paradise Plant Shop</title>
+        <title>Mariyam's Gardens Plant Shop</title>
         <style>
             * { margin: 0; padding: 0; box-sizing: border-box; }
             body { 
@@ -104,24 +104,28 @@ app.get("/", (req, res) => {
                 justify-content: center;
                 color: white;
                 text-align: center;
-                padding: 20px;
+                padding: 15px;
+                overflow-x: hidden;
             }
             .container {
                 background: rgba(255, 255, 255, 0.1);
                 backdrop-filter: blur(10px);
-                padding: 50px;
+                padding: 40px 30px;
                 border-radius: 20px;
                 box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
                 max-width: 600px;
+                width: 100%;
+                margin: 10px;
             }
             h1 { 
-                font-size: 3.5em; 
+                font-size: clamp(2.2em, 5vw, 3.5em);
                 margin-bottom: 20px;
                 text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+                word-wrap: break-word;
             }
             p { 
-                font-size: 1.3em; 
-                margin-bottom: 30px;
+                font-size: clamp(1em, 3vw, 1.3em);
+                margin-bottom: 25px;
                 opacity: 0.9;
                 line-height: 1.6;
             }
@@ -129,22 +133,52 @@ app.get("/", (req, res) => {
                 display: inline-block;
                 background: linear-gradient(45deg, #4CAF50, #66BB6A);
                 color: white;
-                padding: 15px 30px;
+                padding: 12px 25px;
                 border-radius: 25px;
                 text-decoration: none;
                 font-weight: bold;
-                margin: 10px;
+                margin: 8px;
                 transition: all 0.3s ease;
-                font-size: 1.1em;
+                font-size: clamp(0.9em, 2.5vw, 1.1em);
+                min-width: 140px;
+                touch-action: manipulation;
             }
-            .btn:hover {
-                transform: translateY(-3px);
-                box-shadow: 0 10px 25px rgba(76, 175, 80, 0.4);
+            .btn:hover, .btn:active {
+                transform: translateY(-2px);
+                box-shadow: 0 8px 20px rgba(76, 175, 80, 0.4);
             }
             .plant-emoji {
-                font-size: 4em;
+                font-size: clamp(2.5em, 8vw, 4em);
                 margin-bottom: 20px;
                 display: block;
+            }
+            @media (max-width: 768px) {
+                .container {
+                    padding: 30px 20px;
+                    margin: 5px;
+                }
+                .btn {
+                    display: block;
+                    margin: 10px auto;
+                    text-align: center;
+                    width: 80%;
+                    max-width: 250px;
+                }
+            }
+            @media (max-width: 480px) {
+                body {
+                    padding: 10px;
+                }
+                .container {
+                    padding: 25px 15px;
+                    border-radius: 15px;
+                }
+                h1 {
+                    margin-bottom: 15px;
+                }
+                p {
+                    margin-bottom: 20px;
+                }
             }
         </style>
     </head>
@@ -171,7 +205,7 @@ app.get("/generate-qr", async (req, res) => {
             <head>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>QR Code - Green Paradise Plant Shop</title>
+                <title>QR Code - Mariyam's Gardens Plant Shop</title>
                 <style>
                     * { margin: 0; padding: 0; box-sizing: border-box; }
                     body { 
@@ -184,31 +218,41 @@ app.get("/generate-qr", async (req, res) => {
                         justify-content: center; 
                         color: white;
                         text-align: center;
-                        padding: 20px;
+                        padding: 15px;
+                        overflow-x: hidden;
                     }
                     .container {
                         background: white;
-                        padding: 40px;
+                        padding: 30px 25px;
                         border-radius: 20px;
                         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
                         color: #333;
                         max-width: 500px;
+                        width: 100%;
+                        margin: 10px;
                     }
                     .qr-code { 
                         border: 3px solid #4CAF50;
-                        padding: 20px; 
+                        padding: 15px; 
                         background-color: white; 
-                        margin: 30px 0;
+                        margin: 25px 0;
                         border-radius: 15px;
                         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+                        max-width: 100%;
+                        height: auto;
+                    }
+                    .qr-code img {
+                        max-width: 100%;
+                        height: auto;
                     }
                     h1 { 
                         color: #2E7D32; 
                         margin-bottom: 20px;
-                        font-size: 2em;
+                        font-size: clamp(1.5em, 4vw, 2em);
+                        word-wrap: break-word;
                     }
                     p { 
-                        font-size: 1.1em; 
+                        font-size: clamp(0.9em, 2.5vw, 1.1em);
                         color: #666;
                         line-height: 1.6;
                         margin-bottom: 15px;
@@ -217,28 +261,62 @@ app.get("/generate-qr", async (req, res) => {
                         color: #4CAF50; 
                         text-decoration: none; 
                         font-weight: bold;
+                        word-wrap: break-word;
+                        overflow-wrap: break-word;
                     }
                     a:hover { 
                         text-decoration: underline; 
                     }
                     .plant-emoji {
-                        font-size: 3em;
+                        font-size: clamp(2em, 6vw, 3em);
                         margin-bottom: 20px;
                         display: block;
                     }
                     .instructions {
                         background: #E8F5E8;
-                        padding: 20px;
+                        padding: 15px;
                         border-radius: 10px;
                         margin-top: 20px;
                         border-left: 4px solid #4CAF50;
+                        text-align: left;
+                    }
+                    @media (max-width: 768px) {
+                        .container {
+                            padding: 25px 20px;
+                            margin: 5px;
+                        }
+                        .qr-code {
+                            padding: 10px;
+                            margin: 20px 0;
+                        }
+                        .instructions {
+                            padding: 12px;
+                        }
+                    }
+                    @media (max-width: 480px) {
+                        body {
+                            padding: 10px;
+                        }
+                        .container {
+                            padding: 20px 15px;
+                            border-radius: 15px;
+                        }
+                        h1 {
+                            margin-bottom: 15px;
+                        }
+                        p {
+                            margin-bottom: 12px;
+                        }
+                        .qr-code {
+                            margin: 15px 0;
+                        }
                     }
                 </style>
             </head>
             <body>
                 <div class="container">
                     <span class="plant-emoji">🌿</span>
-                    <h1>Green Paradise Plant Shop</h1>
+                    <h1>Mariyam's Gardens</h1>
                     <p>Scan the QR code below to browse our beautiful plant collection!</p>
                     <img class="qr-code" src="${qrCodeDataUrl}" alt="QR Code to Plant Collection">
                     <div class="instructions">
@@ -247,9 +325,7 @@ app.get("/generate-qr", async (req, res) => {
                         <p>2. Point it at the QR code above</p>
                         <p>3. Tap the notification to visit our plant shop</p>
                     </div>
-                    <p style="margin-top: 20px;">
-                        Or visit directly: <a href="${qrCodeTargetUrl}">${qrCodeTargetUrl}</a>
-                    </p>
+                   
                 </div>
             </body>
             </html>
@@ -259,6 +335,10 @@ app.get("/generate-qr", async (req, res) => {
     res.status(500).send("Error generating QR code.");
   }
 });
+
+//  <p style="margin-top: 20px;">
+//                         Or visit directly: <a href="${qrCodeTargetUrl}">${qrCodeTargetUrl}</a>
+//                     </p>
 
 // The new endpoint that the QR code will point to, showing plants and prices
 app.get("/plants-listing", (req, res) => {
@@ -275,39 +355,50 @@ app.get("/plants-listing", (req, res) => {
                     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
                     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
                     min-height: 100vh;
-                    padding: 20px;
+                    padding: 15px;
                     color: #333;
+                    overflow-x: hidden;
                 }
                 .header {
                     text-align: center;
-                    margin-bottom: 40px;
+                    margin-bottom: 30px;
                     color: white;
+                    padding: 0 10px;
                 }
                 .header h1 { 
-                    font-size: 3em; 
+                    font-size: clamp(2em, 6vw, 3em);
                     margin-bottom: 10px;
                     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+                    word-wrap: break-word;
                 }
                 .header p {
-                    font-size: 1.2em;
+                    font-size: clamp(1em, 3vw, 1.2em);
                     opacity: 0.9;
+                    max-width: 600px;
+                    margin: 0 auto;
+                    line-height: 1.5;
                 }
                 .plants-container { 
                     display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-                    gap: 30px;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 20px;
                     max-width: 1200px;
                     margin: 0 auto;
+                    padding: 0 10px;
                 }
                 .plant-card { 
                     background: white;
                     border-radius: 20px;
-                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-                    padding: 25px;
+                    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+                    padding: 20px;
                     text-align: center;
                     transition: all 0.3s ease;
                     position: relative;
                     overflow: hidden;
+                    width: 100%;
+                    min-height: 450px;
+                    display: flex;
+                    flex-direction: column;
                 }
                 .plant-card::before {
                     content: '';
@@ -319,29 +410,30 @@ app.get("/plants-listing", (req, res) => {
                     background: linear-gradient(90deg, #4CAF50, #8BC34A, #CDDC39);
                 }
                 .plant-card:hover { 
-                    transform: translateY(-10px) scale(1.02);
-                    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+                    transform: translateY(-5px) scale(1.01);
+                    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
                 }
                 .plant-card img { 
                     width: 100%;
-                    height: 200px;
-                    object-fit: contain;
+                    object-fit: cover;
                     border-radius: 15px;
-                    margin-bottom: 20px;
+                    margin-bottom: 15px;
                     background: #f8f9fa;
-                    padding: 10px;
+                    padding: 8px;
+                    height: 300px;
                 }
                 .plant-card h2 { 
                     color: #2E7D32;
-                    font-size: 1.5em;
-                    margin-bottom: 10px;
+                    font-size: clamp(1.2em, 3vw, 1.4em);
+                    margin-bottom: 8px;
                     font-weight: 600;
+                    line-height: 1.3;
                 }
                 .plant-card .price { 
                     font-weight: bold;
                     color: #1B5E20;
-                    font-size: 1.8em;
-                    margin-bottom: 15px;
+                    font-size: clamp(1.4em, 4vw, 1.6em);
+                    margin-bottom: 12px;
                     background: linear-gradient(45deg, #4CAF50, #66BB6A);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
@@ -349,53 +441,109 @@ app.get("/plants-listing", (req, res) => {
                 }
                 .plant-card .description {
                     color: #666;
-                    line-height: 1.5;
-                    margin-bottom: 15px;
-                    font-size: 0.95em;
+                    line-height: 1.4;
+                    margin-bottom: 12px;
+                    font-size: clamp(0.85em, 2.2vw, 0.95em);
+                    flex-grow: 1;
                 }
                 .plant-card .care-info {
                     background: #E8F5E8;
-                    padding: 10px;
-                    border-radius: 10px;
+                    padding: 8px;
+                    border-radius: 8px;
                     color: #2E7D32;
-                    font-size: 0.9em;
+                    font-size: clamp(0.8em, 2vw, 0.85em);
                     font-weight: 500;
+                    margin-bottom: 15px;
                 }
                 .footer {
                     text-align: center;
-                    margin-top: 50px;
+                    margin-top: 40px;
                     color: white;
                     opacity: 0.8;
+                    padding: 20px 10px;
+                }
+                .footer p {
+                    font-size: clamp(0.9em, 2.5vw, 1em);
+                    margin-bottom: 5px;
                 }
                 .buy-btn {
                     background: linear-gradient(45deg, #4CAF50, #66BB6A);
                     color: white;
                     border: none;
-                    padding: 12px 24px;
-                    border-radius: 25px;
+                    padding: 10px 20px;
+                    border-radius: 20px;
                     font-weight: bold;
                     cursor: pointer;
-                    margin-top: 15px;
                     transition: all 0.3s ease;
-                    font-size: 1em;
+                    font-size: clamp(0.85em, 2.2vw, 0.95em);
+                    touch-action: manipulation;
+                    width: 100%;
+                    max-width: 200px;
+                    margin: 0 auto;
                 }
-                .buy-btn:hover {
+                .buy-btn:hover, .buy-btn:active {
                     transform: translateY(-2px);
-                    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+                    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
                 }
                 @media (max-width: 768px) {
+                    body {
+                        padding: 10px;
+                    }
+                    .plants-container {
+                        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                        gap: 15px;
+                        padding: 0 5px;
+                    }
+                    .plant-card {
+                        padding: 15px;
+                        min-height: 400px;
+                    }
+                    .plant-card img {
+                        margin-bottom: 12px;
+                    }
+                    .header {
+                        margin-bottom: 25px;
+                    }
+                }
+                @media (max-width: 480px) {
                     .plants-container {
                         grid-template-columns: 1fr;
+                        gap: 12px;
+                        padding: 0;
                     }
-                    .header h1 {
-                        font-size: 2.2em;
+                    .plant-card {
+                        margin: 0 5px;
+                        padding: 12px;
+                        min-height: 380px;
+                        border-radius: 15px;
+                    }
+                    .plant-card img {
+                        margin-bottom: 10px;
+                        padding: 6px;
+                    }
+                    .header {
+                        margin-bottom: 20px;
+                        padding: 0 5px;
+                    }
+                    .footer {
+                        margin-top: 30px;
+                        padding: 15px 5px;
+                    }
+                }
+                @media (max-width: 360px) {
+                    .plant-card {
+                        margin: 0;
+                        padding: 10px;
+                        min-height: 360px;
+                    }
+                    .plant-card img {
                     }
                 }
             </style>
         </head>
         <body>
             <div class="header">
-                <h1>🌿 Green Paradise Plant Shop �</h1>
+                <h1>🌿 Mariyam's Gardens Plant Shop �</h1>
                 <p>Bring nature into your home with our beautiful collection of indoor plants</p>
             </div>
             <div class="plants-container">
@@ -423,7 +571,7 @@ app.get("/plants-listing", (req, res) => {
   plantsHtml += `
             </div>
             <div class="footer">
-                <p>🌱 Thank you for choosing Green Paradise! 🌱</p>
+                <p>🌱 Thank you for choosing Mariyam's Gardens! 🌱</p>
                 <p>Contact us: plants@greenparadise.com | 📞 (555) 123-GROW</p>
             </div>
         </body>
