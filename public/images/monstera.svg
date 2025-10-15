@@ -1,0 +1,18 @@
+<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#e8f5e8"/>
+  <!-- Pot -->
+  <path d="M120 220 L180 220 L185 280 L115 280 Z" fill="#8b4513" stroke="#654321" stroke-width="2"/>
+  <!-- Soil -->
+  <ellipse cx="150" cy="225" rx="30" ry="8" fill="#4a4a4a"/>
+  <!-- Main stem -->
+  <rect x="147" y="150" width="6" height="70" fill="#2d5016"/>
+  <!-- Large leaves -->
+  <path d="M150 160 Q110 140 100 170 Q110 190 140 180 Q150 170 150 160" fill="#228b22" stroke="#1a5f1a" stroke-width="1"/>
+  <path d="M150 160 Q190 140 200 170 Q190 190 160 180 Q150 170 150 160" fill="#32cd32" stroke="#228b22" stroke-width="1"/>
+  <path d="M150 140 Q120 110 105 140 Q115 170 145 160 Q150 150 150 140" fill="#228b22" stroke="#1a5f1a" stroke-width="1"/>
+  <path d="M150 140 Q180 110 195 140 Q185 170 155 160 Q150 150 150 140" fill="#32cd32" stroke="#228b22" stroke-width="1"/>
+  <!-- Fenestrations (holes) -->
+  <ellipse cx="125" cy="155" rx="8" ry="12" fill="#e8f5e8"/>
+  <ellipse cx="175" cy="155" rx="8" ry="12" fill="#e8f5e8"/>
+  <text x="150" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2d5016">Monstera</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#f0f8f0"/>
+  <!-- Pot -->
+  <path d="M120 220 L180 220 L185 280 L115 280 Z" fill="#8b4513" stroke="#654321" stroke-width="2"/>
+  <!-- Soil -->
+  <ellipse cx="150" cy="225" rx="30" ry="8" fill="#4a4a4a"/>
+  <!-- Main trunk -->
+  <rect x="145" y="170" width="10" height="50" fill="#8b4513"/>
+  <!-- Large fiddle-shaped leaves -->
+  <path d="M150 180 Q120 160 115 130 Q120 100 140 110 Q160 115 165 130 Q160 160 150 180" fill="#228b22" stroke="#1a5f1a" stroke-width="2"/>
+  <path d="M150 180 Q180 160 185 130 Q180 100 160 110 Q140 115 135 130 Q140 160 150 180" fill="#32cd32" stroke="#228b22" stroke-width="2"/>
+  <path d="M150 160 Q125 140 120 110 Q125 80 145 90 Q165 95 170 110 Q165 140 150 160" fill="#228b22" stroke="#1a5f1a" stroke-width="2"/>
+  <!-- Leaf veins -->
+  <path d="M150 180 L140 150 M150 180 L160 150" stroke="#1a5f1a" stroke-width="1" fill="none"/>
+  <path d="M150 160 L140 130 M150 160 L160 130" stroke="#1a5f1a" stroke-width="1" fill="none"/>
+  <text x="150" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2d5016">Fiddle Leaf Fig</text>
+</svg>

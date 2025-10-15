@@ -1,0 +1,29 @@
+<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#f0f8f0"/>
+  <!-- Pot -->
+  <path d="M120 220 L180 220 L185 280 L115 280 Z" fill="#8b4513" stroke="#654321" stroke-width="2"/>
+  <!-- Soil -->
+  <ellipse cx="150" cy="225" rx="30" ry="8" fill="#4a4a4a"/>
+  <!-- ZZ Plant stems coming from soil -->
+  <rect x="125" y="170" width="8" height="50" fill="#2d5016"/>
+  <rect x="140" y="160" width="8" height="60" fill="#2d5016"/>
+  <rect x="155" y="165" width="8" height="55" fill="#2d5016"/>
+  <rect x="170" y="175" width="8" height="45" fill="#2d5016"/>
+  <!-- ZZ Plant leaflets -->
+  <ellipse cx="115" cy="165" rx="12" ry="8" fill="#228b22" stroke="#1a5f1a" stroke-width="1"/>
+  <ellipse cx="115" cy="150" rx="12" ry="8" fill="#32cd32" stroke="#228b22" stroke-width="1"/>
+  <ellipse cx="115" cy="135" rx="12" ry="8" fill="#228b22" stroke="#1a5f1a" stroke-width="1"/>
+  <ellipse cx="130" cy="155" rx="12" ry="8" fill="#32cd32" stroke="#228b22" stroke-width="1"/>
+  <ellipse cx="130" cy="140" rx="12" ry="8" fill="#228b22" stroke="#1a5f1a" stroke-width="1"/>
+  <ellipse cx="130" cy="125" rx="12" ry="8" fill="#32cd32" stroke="#228b22" stroke-width="1"/>
+  <ellipse cx="145" cy="150" rx="12" ry="8" fill="#228b22" stroke="#1a5f1a" stroke-width="1"/>
+  <ellipse cx="145" cy="135" rx="12" ry="8" fill="#32cd32" stroke="#228b22" stroke-width="1"/>
+  <ellipse cx="145" cy="120" rx="12" ry="8" fill="#228b22" stroke="#1a5f1a" stroke-width="1"/>
+  <ellipse cx="160" cy="155" rx="12" ry="8" fill="#32cd32" stroke="#228b22" stroke-width="1"/>
+  <ellipse cx="160" cy="140" rx="12" ry="8" fill="#228b22" stroke="#1a5f1a" stroke-width="1"/>
+  <ellipse cx="160" cy="125" rx="12" ry="8" fill="#32cd32" stroke="#228b22" stroke-width="1"/>
+  <ellipse cx="175" cy="160" rx="12" ry="8" fill="#228b22" stroke="#1a5f1a" stroke-width="1"/>
+  <ellipse cx="175" cy="145" rx="12" ry="8" fill="#32cd32" stroke="#228b22" stroke-width="1"/>
+  <ellipse cx="175" cy="130" rx="12" ry="8" fill="#228b22" stroke="#1a5f1a" stroke-width="1"/>
+  <text x="150" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2d5016">ZZ Plant</text>
+</svg>
