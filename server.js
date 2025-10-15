@@ -17,7 +17,7 @@ const plants = [
   {
     name: "Monstera Deliciosa",
     price: 45.0,
-    imageUrl: "/images/monstera.svg",
+    imageUrl: "/images/image1.jpg",
     description:
       "A stunning tropical plant with iconic split leaves that will make any room feel like a jungle paradise.",
     care: "Medium light, water weekly",
@@ -25,7 +25,7 @@ const plants = [
   {
     name: "Snake Plant",
     price: 25.5,
-    imageUrl: "/images/snake-plant.svg",
+    imageUrl: "/images/image2.jpg",
     description:
       "Perfect for beginners! This hardy plant tolerates neglect and purifies your air while you sleep.",
     care: "Low light, water monthly",
@@ -33,7 +33,7 @@ const plants = [
   {
     name: "Golden Pothos",
     price: 18.75,
-    imageUrl: "/images/pothos.svg",
+    imageUrl: "/images/image3.jpg",
     description:
       "A trailing beauty that's virtually indestructible. Perfect for hanging baskets or climbing moss poles.",
     care: "Medium light, water when dry",
@@ -41,7 +41,7 @@ const plants = [
   {
     name: "Fiddle Leaf Fig",
     price: 60.0,
-    imageUrl: "/images/fiddle-leaf.svg",
+    imageUrl: "/images/image4.jpg",
     description:
       "The Instagram-famous tree that adds dramatic height and elegance to any modern living space.",
     care: "Bright indirect light, water weekly",
@@ -49,7 +49,7 @@ const plants = [
   {
     name: "Peace Lily",
     price: 32.0,
-    imageUrl: "/images/placeholder.svg",
+    imageUrl: "/images/image5.jpg",
     description:
       "Elegant white blooms and glossy green leaves. Tells you when it needs water by drooping slightly.",
     care: "Medium light, keep soil moist",
@@ -57,7 +57,7 @@ const plants = [
   {
     name: "Rubber Plant",
     price: 38.5,
-    imageUrl: "/images/placeholder.svg",
+    imageUrl: "/images/image6.jpg",
     description:
       "Glossy, thick leaves that shine with health. A statement plant that grows into an impressive tree.",
     care: "Bright light, water when topsoil dry",
@@ -65,7 +65,7 @@ const plants = [
   {
     name: "ZZ Plant",
     price: 28.0,
-    imageUrl: "/images/placeholder.svg",
+    imageUrl: "/images/image7.jpg",
     description:
       "Practically immortal! Glossy leaves that tolerate low light and infrequent watering perfectly.",
     care: "Low to medium light, water monthly",
@@ -73,7 +73,7 @@ const plants = [
   {
     name: "Philodendron Heartleaf",
     price: 22.0,
-    imageUrl: "/images/placeholder.svg",
+    imageUrl: "/images/image8.jpg",
     description:
       "Cascading heart-shaped leaves that grow quickly and forgive forgotten waterings.",
     care: "Medium light, water weekly",
